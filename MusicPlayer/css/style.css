@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(59, 46, 94);
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 13px;
+}
+:root{
+    --nav-color: rgb(48,38,74);
+}
+.body-header{
+    min-height: 80px;
+    width: 100%;
+}
+
+/* navigation content */
+.nav-bar{
+    min-height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: fixed;
+    z-index: 5;
+}
+
+.nav-contaner1{
+width: 50%;
+
+height: 10vh;
+
+background: var(--nav-color);
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content:left;
+}
+.logo-link{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 9%;
+}
+.logo-image{
+    height: 60px;
+    width: 60px;
+    background: url('../images/music-logo.jpg');
+    background-size: cover;
+    border-radius: 50%;
+}
+.nav-contaner1 h1{
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+}
+.spacial-lins{
+    list-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 15px;
+}
+.spacial-lins li{
+    display: inline;
+    letter-spacing: 1px;
+}
+.spacial-lins a{
+    text-decoration: none;
+    color: white;
+}
+.nav-contaner2{
+width: 50%;
+
+height: 10vh;
+background: var(--nav-color);
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
+.search-form{
+    margin: auto;
+}
+#search-index{
+    width:20vw;
+    min-width: 150px;
+    height: 5vh;
+    border-radius: 15px;
+    padding: 15px;
+    border: rgba(255, 255, 255, 0.534) solid;
+    color: rgba(255, 255, 255, 0.534);
+    font-size: large;
+    background: transparent;
+}
+i{
+   font-size: 3vh;
+   margin-left: 25px;
+   color: rgba(255, 255, 255, 0.534);
+}
+@media screen and (max-width:767px){
+    .nav-contaner1{
+        width: 100%;
+    }
+    .nav-contaner2{
+        width: 100%;
+    }
+    .logo-image{
+        height: 0;
+        width: 0;
+    }
+}
+/* main contaner */
+main{
+    width: 80%;
+    min-height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.left-main-contaner{
+    width:70%;
+    min-height: 90vh;
+    /* background-color: powderblue; */
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.right-main-contaner{
+    width:30%;
+    min-height: 90vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width:1000px) {
+    main{
+        margin-top: 10vh;
+        width:100%;
+    }
+}
+@media screen and (max-width:767px){
+    .right-main-contaner{width: 0;
+        overflow: hidden;
+    }
+    .left-main-contaner{
+        width: 100%;
+    }
+}
+
+/* front images */
+.front-img{
+    min-height: 30vh;
+    /* background-color:royalblue ; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.front-img-1,.front-img-2,.front-img-3{
+height: 25vh;
+width: 32%;
+margin: auto;
+box-shadow: 1px 1px 10px black;
+transition: all ease-in-out 0.5s;
+filter: blur(3px);
+/* -webkit-filter: blur(8px); */
+
+}
+.front-img-1{
+    background: url('../musics/front/top-10.jpg') no-repeat;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.front-img-2{
+    background: url('../musics/front/international-100.jpg') no-repeat;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    filter: blur(0px);
+}
+.front-img-3{
+    background: url('../musics/front/punjabi_songs.png') no-repeat;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.front-img-1:hover,.front-img-2:hover,.front-img-3:hover{
+    transform: scale(1.3);
+    filter: blur(0px);
+    z-index: 1;
+}
+.latest-release{
+    min-height: 35vh;
+    /* background:rgb(59, 56, 56); */
+    color: white;
+    display:flex;
+    flex-wrap: wrap;
+
+}
+@media screen and (max-width:475px){
+    
+    
+}
+/* latest release content */
+h2{
+    width: 100%;
+    padding-top:20px;
+    padding-bottom: 10px;
+}
+.latest-release-div{
+    width: 50%;
+    min-height: 10vh;
+    /* border: black solid; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.latest-release-div-img1{
+    margin-top: 1.5vh;
+    background:url("..//musics/front-image.jpg") no-repeat;
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    
+}
+.play-music{
+    width: 100%;
+    height: 100%;
+    
+}
+.play-music i{
+    margin-top: 40%;
+    margin-left: 40%;
+}
+.play-music:hover{
+    background: rgba(39, 37, 37, 0.589);
+}
+.latest-music-info{
+    margin-top: 2vh;
+    margin-left: 1vw;
+}
+.latest-music-info p{
+    margin-top: 3vh;
+}
+.music-time{
+    margin-top: 2vh;
+    margin-left: 5vw;
+}
+@media screen and (max-width:475px){
+    .latest-release-div{
+        width: 100%;
+    }
+
+}
+/* popular artists */
+.popular-artists{
+    min-height: 15vh;
+    width: 100%;
+    /* background: chocolate; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+.artists > div{
+   height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.artist1{
+    background: url("../musics/artist/badshah.webp");
+    background-position: center;
+    background-size: cover;
+}
+.artist2{
+    background: url("../musics/artist/honey-singh.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.artist3{
+    background: url("../musics/artist/mallind-gaba.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.artist4{
+    background: url("../musics/artist/NehaKakkar.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.artist5{
+    background: url("../musics/artist/palak.jfif");
+    background-position: center;
+    background-size: cover;
+}
+.artist6{
+    background: url("../musics/artist/rahman.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.artists .play-music{
+    border-radius: 50%;
+}
+/* mood music  */
+.mood-music{
+    min-height: 20vh;
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background: violet; */
+}
+.party{
+height: 18vh;
+width: 30%;
+background: url('../musics/mood/party-time.cms');
+background-size: cover;
+background-position: center;
+display: flex;
+color: white;
+box-shadow: 1px 1px 10px black;
+}
+.electronic{
+    height: 18vh;
+    width: 30%;
+    background: url('../musics/mood/electronic-music.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    box-shadow: 1px 1px 10px black;
+    }
+.road-trip{
+    
+        height: 18vh;
+        width: 30%;
+        background: url('../musics/mood/road-trip.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        color: white;
+        box-shadow: 1px 1px 10px black;
+}
+.mood-music p{
+    font-size: medium;
+    margin: auto;
+}
+/* latest Hindi */
+.latest-hindi,.latest-english{
+    min-height: 20vh;
+    width: 100%;
+    /* border: black solid; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+h2{
+    color: white;
+}
+.music-box{
+    height: 150px;
+    width: 120px;
+    /* border: mediumblue solid; */
+}
+p{
+    color: white;
+}
+.music-box > div{
+    height: 96px;
+    width: 96px;
+    margin-bottom: 15px;
+    
+}
+.e1st-img{
+    background: url("../musics/latest/english/darkside.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.e2nd-img{
+    background: url("../musics/latest/english/girls\ like\ you.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.e3rd-img{
+    background: url("../musics/latest/english/here\ with\ me.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.e4th-img{
+    background: url("../musics/latest/english/memori.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.e5th-img{
+    background: url("../musics/latest/english/on\ my\ way.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.e6th-img{
+    background: url("../musics/latest/english/senorita.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.m1st-img{
+    background: url("../musics/latest/hindi/baarish\ ki\ jaaye.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.m2nd-img{
+    background: url("../musics/latest/hindi/choor\ denge.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.m3rd-img{
+    background: url("../musics/latest/hindi/is\ Qudar.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.m4th-img{
+    background: url("../musics/latest/hindi/oh\ sanam.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.m5th-img{
+    background: url("../musics/latest/hindi/raba\ mehar\ kari.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.m6th-img{
+    background: url("../musics/latest/hindi/roohi.jpg");
+    background-position: center;
+    background-size: cover;
+}
+/* Queue part  */
+.queue{
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+
+}
+h2{ font-size: 20px;
+    display: inline;
+    padding: 1vw;
+}
+.queue-pic{
+    height: 8vh;
+    width: 8vh;
+    margin-right: 2vw;
+}
+.queue i{
+    padding-top: 2vh;
+}

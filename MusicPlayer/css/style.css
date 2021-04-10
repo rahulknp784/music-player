@@ -120,12 +120,13 @@ i{
 main{
     width: 80%;
     min-height: 90vh;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
     margin-top: 5vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: absolute;
+    padding-bottom: 15vh;
 }
 .left-main-contaner{
     width:70%;
@@ -145,6 +146,7 @@ main{
 }
 @media screen and (max-width:1000px) {
     main{
+        margin-left: 0%;
         margin-top: 10vh;
         width:100%;
     }
@@ -468,4 +470,121 @@ h2{ font-size: 20px;
 }
 .queue i{
     padding-top: 2vh;
+}
+/* main music player  */
+.main-music-player{
+    width: 100%;
+    height: 10vh;
+    background-color: #272525;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 90vh;
+}
+.music-disc{
+  width: 20%;  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.music-disc p{
+    margin-top: 2vh;
+    margin-left: 2vw;
+    color: rgba(255, 255, 255, 0.623);
+}
+.music-disc-img{
+    height: 6vh;
+    width: 6vh;
+    background:url("../images/music-logo.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 2vh;
+    box-shadow: 1px 1px 10px black;
+}
+i{  padding-left: 0;
+    padding-top: 2vh;
+}
+.music-control{
+ /* background-color: aqua; */
+ width: 50%;
+ display: flex;
+ flex-direction: row;
+ 
+}
+.music-buttons{
+    margin-top: 2vh;
+    width: 40%;
+}
+.music-timeline{
+    height: 0;
+    width: 60%;
+    border: white solid;
+    margin-top: 5vh;
+}
+.dot{
+    border: springgreen solid;
+    border-radius: 50%;
+    margin-top: -7px;
+    background: springgreen ;
+    margin-left: 100%;
+    height: 15px;
+    width: 15px;
+}
+.complete-50{
+    width: 50%;
+    height: 0;
+    border: springgreen solid;
+    margin-top: -2.5px;
+    margin-left: -1px;
+}
+.sound-control{
+/* background-color: cadetblue; */
+width: 20%;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+}
+.sound-control i{
+    padding-top: 4vh;
+    margin-right: 1vw;
+}
+.sound-line{
+    height: 0;
+    width: 30%;
+    border: white solid;
+    margin-top: 4vh;
+    margin-top:5vh;
+
+}
+
+@media screen and (max-width:800px) {
+    
+    .sound-control{
+        width: 0;
+        overflow: hidden;
+    }
+    .music-control{
+        width: 65%;
+    }
+    i{
+        margin-left: 5%;
+    }
+    .music-disc{
+        width: 30%;
+    }
+    
+}
+@media screen and (max-width:767px) {
+    .music-disc{
+        width: 0%;
+    }
+    .music-buttons{
+        width:45%;
+    }
+    .music-control{
+        width: 95%;
+    }
+
+    
 }

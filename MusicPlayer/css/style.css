@@ -246,7 +246,7 @@ h2{
 }
 .play-music i{
     margin-top: 40%;
-    margin-left: 40%;
+    margin-left: 20%;
 }
 .play-music:hover{
     background: rgba(39, 37, 37, 0.589);

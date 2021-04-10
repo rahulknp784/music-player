@@ -87,6 +87,7 @@ flex-direction: row;
 }
 .search-form{
     margin: auto;
+    width:70%;
 }
 #search-index{
     width:20vw;

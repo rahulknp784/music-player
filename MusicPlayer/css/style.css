@@ -19,32 +19,129 @@ p{
 }
 
 /* navigation content */
-.nav-bar{
-    min-height: 15vh;
+nav {
+    background-color: rgb(47, 37, 72);
+    min-height: 12vh;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
     z-index: 5;
 }
 
-.nav-contaner1{
-width: 50%;
-
-height: 10vh;
-
-background: var(--nav-color);
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-justify-content:left;
+.logo-img {
+    height: 60px;
+    width: 60px;
+    background: url('../images/music-logo.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 5vw;
+    float: left;
+    margin-top: 18px;
 }
-.logo-link{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 9%;
+
+#logo {
+    color: white;
+    font-size: xx-large;
+    font-family: 'Bangers', cursive;
+    margin-left: 3vw;
+    margin-top: 25px;
+    height: 8vh;
+    float: left;
 }
+
+.links a {
+    text-decoration: none;
+    color: white;
+}
+
+.links {
+    float: right;
+    margin-right: 35px;
+    word-spacing: 25px;
+    margin-top: 20px;
+}
+
+.links li {
+    display: inline-block;
+    list-style: none;
+    
+}
+form{
+    min-width: 250px;
+}
+#search {
+    width: 20vw;
+    height: 40px;
+    margin-right: 1vw;
+    background: rgb(37, 37, 61);
+    border: #ffffff85 solid;
+    border-radius: 15px;
+    padding-left: 25px;
+    font-size: 20px;
+    color: white;
+}
+
+#check,
+.check-bar {
+    display: none;
+    float: right;
+    margin-top: 3vh;
+    font-size: 25px;
+    border: #ffffff85 solid;
+    border-radius: 5px;
+    margin-right: 30px;
+    padding: 5px;
+}
+
+
+
+
+@media (max-width:767px) {
+    nav {
+        position: fixed;
+    }
+
+    .check-bar {
+        display: block;
+
+    }
+
+    .check-bar:hover {
+        background-color:#ffffff85 ;
+        border: black solid;
+    }
+
+    #check:checked~ul {
+        display: block;
+    }
+
+    .links li {
+        display: block;
+        text-align: center;
+        float: none;
+        border-bottom: rgba(255, 255, 255, 0.521) solid;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #search {
+        width: 250px;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+        word-spacing: 20px;
+        float: left;
+        font-size: 20px;
+        margin-top: 5vh;
+    }
+
+    form a {
+        display: none;
+    }
+}
+/* ***********************************  */
 .logo-image{
     height: 60px;
     width: 60px;
@@ -52,77 +149,18 @@ justify-content:left;
     background-size: cover;
     border-radius: 50%;
 }
-.nav-contaner1 h1{
-    font-family: 'Bangers', cursive;
-    letter-spacing: 2px;
-    color: white;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 5%;
-}
-.spacial-lins{
-    list-style: none;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 5%;
-    font-family: Arial, Helvetica, sans-serif;
-    word-spacing: 15px;
-}
-.spacial-lins li{
-    display: inline;
-    letter-spacing: 1px;
-}
-.spacial-lins a{
-    text-decoration: none;
-    color: white;
-}
-.nav-contaner2{
-width: 50%;
-
-height: 10vh;
-background: var(--nav-color);
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-}
-.search-form{
-    margin: auto;
-    width:70%;
-}
-#search-index{
-    width:20vw;
-    min-width: 150px;
-    height: 5vh;
-    border-radius: 15px;
-    padding: 15px;
-    border: rgba(255, 255, 255, 0.534) solid;
-    color: rgba(255, 255, 255, 0.534);
-    font-size: large;
-    background: transparent;
-}
 i{
    font-size: 3vh;
-   margin-left: 25px;
+   margin-left: 20px;
    color: rgba(255, 255, 255, 0.534);
 }
-@media screen and (max-width:767px){
-    .nav-contaner1{
-        width: 100%;
-    }
-    .nav-contaner2{
-        width: 100%;
-    }
-    .logo-image{
-        height: 0;
-        width: 0;
-    }
-}
+
 /* main contaner */
 main{
     width: 80%;
     min-height: 90vh;
     margin-left: 10%;
-    margin-top: 5vh;
+    margin-top: 15vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -148,7 +186,7 @@ main{
 @media screen and (max-width:1000px) {
     main{
         margin-left: 0%;
-        margin-top: 10vh;
+        margin-top: 15vh;
         width:100%;
     }
 }
@@ -242,11 +280,12 @@ h2{
 .play-music{
     width: 100%;
     height: 100%;
-    
+    position: relative;
 }
 .play-music i{
     margin-top: 20%;
     margin-left: 40%;
+    position: absolute;
 }
 .play-music:hover{
     background: rgba(39, 37, 37, 0.589);
